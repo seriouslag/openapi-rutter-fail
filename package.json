@@ -1,0 +1,20 @@
+{
+  "name": "openapi-rudder-fail",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "npm run generate:api && tsc --noEmit",
+    "generate:api": "npx @hey-api/openapi-ts -i https://docs.rutter.com/rest/2024-08-31/spec -o ./src/generated/ -c @hey-api/client-fetch"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@hey-api/openapi-ts": "^0.66.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@hey-api/client-fetch": "^0.10.0"
+  }
+}
